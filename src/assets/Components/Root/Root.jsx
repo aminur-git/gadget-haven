@@ -1,16 +1,18 @@
 import React from 'react';
 import Navbar from '../Nav/Navbar';
-import { Outlet } from 'react-router';
+import { Outlet, useLoaderData } from 'react-router';
+
+export const Context = React.createContext()
 
 const Root = () => {
+    const data = useLoaderData()
     return (
-
-        <div className='container mx-auto'>
-            <div className='p-4  bg-[#9538E2] m-2 rounded-2xl'> 
+        <Context.Provider value={data}>
+        <div className='container mx-auto md:p-4 '>    
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <Outlet data={data}></Outlet>
         </div>
-        </div>
+        </Context.Provider>
     );
 };
 

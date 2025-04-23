@@ -1,0 +1,206 @@
+[
+  {
+    "product_id": "P001",
+    "product_title": "iPhone 15 Pro Max",
+    "product_image": "https://i.ibb.co.com/B2CQxQSq/i-Phone-15-Plus-2-6-5363.jpg",
+    "category": "smartphone",
+    "price": 1199,
+    "description": "Apple's most powerful iPhone with A17 Pro chip, titanium design, and Pro camera system.",
+    "Specification": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Pro chip",
+      "Triple 48MP Pro camera",
+      "USB-C charging",
+      "iOS 17"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Samsung Galaxy S24 Ultra",
+    "product_image": "https://i.ibb.co.com/cK7PpjN0/Galaxy-S24-Ultra-Titanium-Green-9977.jpg",
+    "category": "smartphone",
+    "price": 1299,
+    "description": "Galaxy S24 Ultra with AI-powered features, top-tier camera, and long battery life.",
+    "Specification": [
+      "6.8-inch QHD+ AMOLED display",
+      "Snapdragon 8 Gen 3",
+      "200MP main camera",
+      "S Pen support",
+      "One UI 6.1"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Google Pixel 8 Pro",
+    "product_image": "https://i.ibb.co.com/m5PfvmS4/Pixel-8-Pro-Obsidian-7046.jpg",
+    "category": "smartphone",
+    "price": 999,
+    "description": "Google's flagship with advanced AI camera features and Android 14.",
+    "Specification": [
+      "6.7-inch LTPO OLED display",
+      "Google Tensor G3 chip",
+      "50MP main camera",
+      "Face & fingerprint unlock",
+      "Android 14"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P004",
+    "product_title": "MacBook Air M3 (2024)",
+    "product_image": "https://i.ibb.co.com/mrmvbdDx/mba-13-m3-2024-hero.png",
+    "category": "laptop",
+    "price": 1299,
+    "description": "Ultra-portable laptop with Apple's latest M3 chip and stunning Retina display.",
+    "Specification": [
+      "13.6-inch Liquid Retina Display",
+      "Apple M3 chip",
+      "8GB Unified Memory",
+      "256GB SSD",
+      "macOS Sonoma"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P005",
+    "product_title": "Dell XPS 15 (2024)",
+    "product_image": "https://i.ibb.co.com/jk7nXwmz/Dell-XPS-15-299000-768x769.jpg",
+    "category": "laptop",
+    "price": 1599,
+    "description": "Premium laptop with Intel Core Ultra processor and stunning OLED display.",
+    "Specification": [
+      "15.6-inch OLED display",
+      "Intel Core Ultra 7",
+      "16GB RAM",
+      "512GB SSD",
+      "Windows 11"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P006",
+    "product_title": "Asus ROG Zephyrus G14",
+    "product_image": "https://i.ibb.co.com/gZ85q0ST/Asus-ROG-Zephyrus-G14-1-768x591.webp",
+    "category": "laptop",
+    "price": 1899,
+    "description": "Compact gaming powerhouse with Ryzen 9 and NVIDIA RTX 4070 GPU.",
+    "Specification": [
+      "14-inch QHD+ 165Hz",
+      "AMD Ryzen 9 7940HS",
+      "NVIDIA RTX 4070",
+      "16GB DDR5 RAM",
+      "1TB SSD"
+    ],
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P007",
+    "product_title": "Sony WF-1000XM5",
+    "product_image": "https://i.ibb.co.com/C50G9PWf/Sony-WF-1000-XM5-Wireless-Noise-Cancelling-Headphones-Black-1353.jpg",
+    "category": "earphones",
+    "price": 299,
+    "description": "Industry-leading noise cancelling truly wireless earphones.",
+    "Specification": [
+      "Active Noise Cancellation",
+      "Hi-Res Audio",
+      "8 hours battery (24 with case)",
+      "Bluetooth 5.3",
+      "Multi-point connectivity"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P008",
+    "product_title": "Apple AirPods Pro (2nd Gen)",
+    "product_image": "https://i.ibb.co.com/XNZ90rq/Air-Pods-Pro-2nd-generation-a-7813.jpg",
+    "category": "earphones",
+    "price": 249,
+    "description": "Apple’s high-end wireless earbuds with adaptive transparency and spatial audio.",
+    "Specification": [
+      "Active Noise Cancellation",
+      "Adaptive Transparency",
+      "H2 chip",
+      "Spatial Audio",
+      "MagSafe Charging Case"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P009",
+    "product_title": "Samsung Galaxy Buds2 Pro",
+    "product_image": "https://i.ibb.co.com/Hf0QKzgt/Galaxy-Buds2-Pro-Black-a-8974-6051.jpg",
+    "category": "earphones",
+    "price": 229,
+    "description": "Premium earbuds with immersive 360 Audio and noise cancellation.",
+    "Specification": [
+      "24-bit Hi-Fi Audio",
+      "360 Audio",
+      "ANC",
+      "Bluetooth 5.3",
+      "IPX7 water resistance"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P010",
+    "product_title": "OnePlus 12",
+    "product_image": "https://i.ibb.co.com/8D3Hgkst/One-Plus-12-Flowy-Emerald-9569.jpg",
+    "category": "smartphone",
+    "price": 899,
+    "description": "Flagship killer with Snapdragon 8 Gen 3 and 5400mAh battery.",
+    "Specification": [
+      "6.82-inch AMOLED QHD+",
+      "Snapdragon 8 Gen 3",
+      "50MP Hasselblad camera",
+      "5400mAh battery",
+      "Android 14"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P011",
+    "product_title": "Lenovo Legion Slim 7i",
+    "product_image": "https://i.ibb.co.com/Hfv0bbTn/Lenovo-Legion-4-6.jpg",
+    "category": "laptop",
+    "price": 1699,
+    "description": "Slim yet powerful gaming laptop with RTX graphics and AI-tuned performance.",
+    "Specification": [
+      "16-inch WQXGA 165Hz",
+      "Intel Core i9",
+      "NVIDIA RTX 4070",
+      "32GB RAM",
+      "1TB SSD"
+    ],
+    "availability": false,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P012",
+    "product_title": "Nothing Ear (2)",
+    "product_image": "https://i.ibb.co.com/23ZTTH7y/NOTHING-Ear-4-5414.jpg",
+    "category": "earphones",
+    "price": 149,
+    "description": "Stylish earbuds with clear sound and customizable EQ.",
+    "Specification": [
+      "Dual chamber drivers",
+      "Customizable sound profile",
+      "ANC & Transparency mode",
+      "Up to 36h with case",
+      "Bluetooth 5.3"
+    ],
+    "availability": true,
+    "rating": 4.4
+  }
+]
