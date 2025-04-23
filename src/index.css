@@ -1,0 +1,8 @@
+body {
+  font-family: "Sora", sans-serif;
+}
+
+a.active {
+  text-decoration: underline 2px;
+  font-weight: bold;
+}
