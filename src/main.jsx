@@ -7,16 +7,21 @@ import Navbar from "./assets/Components/Nav/Navbar.jsx";
 import Home from "./assets/Components/Home/Home.jsx";
 import Error from "./assets/Components/Error/Error.jsx";
 import Statistics from "./assets/Components/Statistics/Statistics.jsx";
+import Root from "./assets/Components/Root/Root.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: <Root></Root>,
     errorElement: <Error></Error>,
     children:[
       {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
         path: "/statistics",
-        element: <Statistics></Statistics>
+        element: <Statistics></Statistics>,
       },
     ]
   }
