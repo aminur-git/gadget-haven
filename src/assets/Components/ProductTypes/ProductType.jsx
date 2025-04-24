@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { data, useParams } from "react-router";
+import {  useParams } from "react-router";
 import { FaStar } from "react-icons/fa6";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
