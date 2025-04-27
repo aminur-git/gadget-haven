@@ -4,11 +4,12 @@ import { Context } from "../Root/Root";
 import Product from "../Product/Product";
 import { NavLink } from "react-router";
 const Home = () => {
-  const products = useContext(Context);
+  const {data} = useContext(Context);
+  const products = data
   return (
     <div className="">
       <div className="">
-        <Banner></Banner>
+        <Banner></Banner>s
       </div>
       <h1 className="text-3xl font-semibold text-center">
         Explore Cutting-Edge Gadgets

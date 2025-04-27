@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
-import {  useParams } from "react-router";
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router";
 import { FaStar } from "react-icons/fa6";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
+import { Context } from "../Root/Root";
 
 const ProductType = () => {
   const { productId } = useParams();
   const [products, setProducts] = useState([]);
+  const { cart, setCart } = useContext(Context);
 
   useEffect(() => {
     fetch("/products.json")
@@ -18,13 +20,14 @@ const ProductType = () => {
 
   if (!product) {
     return (
-      <div>
-        <span class="loading loading-spinner text-primary"></span>
+      <div className="flex justify-center mt-20">
+        <span className="loading loading-spinner text-4xl text-center"></span>
       </div>
     );
   }
 
   const {
+    product_id,
     product_title,
     product_image,
     price,
@@ -33,6 +36,17 @@ const ProductType = () => {
     description,
     rating,
   } = product;
+
+  const handleAddToCart = () => {
+    if(cart.some(item => item.product_id === product.product_id)){
+      console.log('exist')
+    }
+    else{
+      const totalCart = [...cart , product]
+    setCart(totalCart)
+    }
+
+  };
 
   return (
     <div>
@@ -50,20 +64,17 @@ const ProductType = () => {
           </div>
         </div>
         <div className=" flex justify-center relative -top-40 md:-top-35 p-3 ">
-
           {/* Product */}
           <div className="bg-white flex flex-col sm:flex-row items-center p-4  rounded-2xl">
             <div className="rounded-2xl max-w-xs md:max-w-md lg:max-w-xl ">
-              <img
-                src={product_image}
-                className=" rounded-2xl"
-                alt=""
-              />
+              <img src={product_image} className=" rounded-2xl" alt="" />
             </div>
 
             <div className="space-y-3 py-2">
               <h1 className="font-bold text-xl md:text-4xl">{product_title}</h1>
-              <p className="text-sm sm:text-base font-semibold">Price: ${price}</p>
+              <p className="text-sm sm:text-base font-semibold">
+                Price: ${price}
+              </p>
               <section className="">
                 {availability ? (
                   <div className="badge badge-outline badge-success ">
@@ -75,9 +86,13 @@ const ProductType = () => {
                   </div>
                 )}
               </section>
-              <section className="text-sm sm:text-base pr-8">{description}</section>
+              <section className="text-sm sm:text-base pr-8">
+                {description}
+              </section>
               <section>
-                <span className="font-bold text-sm sm:text-base">Specifications:</span>
+                <span className="font-bold text-sm sm:text-base">
+                  Specifications:
+                </span>
                 <ul className="px-4">
                   {Specification.map((spec, idx) => (
                     <li className="list-decimal text-sm sm:text-base" key={idx}>
@@ -92,8 +107,11 @@ const ProductType = () => {
                   <FaStar className="text-yellow-400 text-xl" />
                 </span>
               </section>
-              <div className="flex items-center gap-8 justify-start text-sm sm:text-base">
-                <button className="btn btn-xs sm:btn-md text-white bg-[#9538E2] border-none rounded-2xl px-8 py-4">
+              <div className="flex items-center gap-((8 justify-start text-sm sm:text-base">
+                <button
+                  onClick={() => handleAddToCart()}
+                  className="btn btn-xs sm:btn-md text-white bg-[#9538E2] border-none rounded-2xl px-8 py-4"
+                >
                   Add To Cart <BsCart3 className="" />
                 </button>
                 <button className="btn btn-circle btn-xs sm:btn-md ">
@@ -107,5 +125,4 @@ const ProductType = () => {
     </div>
   );
 };
-
 export default ProductType;
