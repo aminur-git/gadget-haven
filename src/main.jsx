@@ -12,7 +12,7 @@ import ProductType from "./assets/Components/ProductTypes/ProductType.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <Root></Root>,
     errorElement: <Error></Error>,
     loader: () => fetch("../public/products.json"),
