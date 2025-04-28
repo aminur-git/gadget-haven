@@ -1,5 +1,8 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
+import { BsCart3 } from "react-icons/bs";
+import { FaRegHeart } from "react-icons/fa";
+
 
 const Navbar = () => {
 
@@ -39,15 +42,22 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Gadget Haven</a>
+        <Link to={"/"}><div className="text-md md:text-2xl font-bold">Gadget Haven</div></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-8">
+        <ul className="menu menu-horizontal px-1 gap-8 text-lg">
           {links}
         </ul>
       </div>
       <div className="navbar-end">
-        
+      <div className="flex items-center gap-4 justify-start text-sm sm:text-base">
+        <NavLink to={"/dashboard/cart"}><button className="btn btn-sm md:btn-md btn-circle bg-white   ">
+          <BsCart3 className="text-md md:text-xl  bg-white" />
+        </button></NavLink>
+        <button className="btn btn-circle btn-xs bg-white sm:btn-md ">
+          <FaRegHeart className="text-md md:text-xl" />
+        </button>
+      </div>
       </div>
     </div>
   );

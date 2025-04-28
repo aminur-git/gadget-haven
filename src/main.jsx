@@ -9,6 +9,8 @@ import Error from "./assets/Components/Error/Error.jsx";
 import Statistics from "./assets/Components/Statistics/Statistics.jsx";
 import Root from "./assets/Components/Root/Root.jsx";
 import ProductType from "./assets/Components/ProductTypes/ProductType.jsx";
+import Cart from "./assets/Components/Cart/Cart.jsx";
+import Dashboard from "./assets/Components/DashBoard/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,16 @@ const router = createBrowserRouter([
       {
         path: "/statistics",
         element: <Statistics></Statistics>,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard></Dashboard>,
+        children: [
+          {
+            path: '/dashboard/cart',
+            element: <Cart></Cart>
+          }
+        ]
       },
       {
         path: "/product-details/:productId",

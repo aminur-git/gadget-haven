@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa6";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { Context } from "../Root/Root";
+import { ToastContainer, toast } from "react-toastify";
 
 const ProductType = () => {
   const { productId } = useParams();
@@ -14,7 +15,7 @@ const ProductType = () => {
     fetch("/products.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
-  });
+  }, [cart]);
 
   const product = products.find((p) => p.product_id == productId);
 
@@ -25,6 +26,10 @@ const ProductType = () => {
       </div>
     );
   }
+
+  const exists = () => toast("Already exists");
+  const success = () => toast("Success");
+  const available = () => toast("Not Available");
 
   const {
     product_id,
@@ -38,18 +43,23 @@ const ProductType = () => {
   } = product;
 
   const handleAddToCart = () => {
-    if(cart.some(item => item.product_id === product.product_id)){
-      console.log('exist')
+    if (!product.availability) {
+      available();
+    } 
+    else if (cart.some((item) => item.product_id === product.product_id)) {
+      exists();
+    } 
+    else {
+      const totalCart = [...cart, product];
+      setCart(totalCart);
+      success();
     }
-    else{
-      const totalCart = [...cart , product]
-    setCart(totalCart)
-    }
-
   };
+  
 
   return (
     <div>
+      <ToastContainer />
       <div className="p-2">
         <div className="  pt-8 bg-[#9538E2]  text-center  text-white  md:rounded-2xl">
           <div className="  flex flex-col my-4 pb-30 ">
@@ -107,7 +117,7 @@ const ProductType = () => {
                   <FaStar className="text-yellow-400 text-xl" />
                 </span>
               </section>
-              <div className="flex items-center gap-((8 justify-start text-sm sm:text-base">
+              <div className="flex items-center gap-8 justify-start text-sm sm:text-base">
                 <button
                   onClick={() => handleAddToCart()}
                   className="btn btn-xs sm:btn-md text-white bg-[#9538E2] border-none rounded-2xl px-8 py-4"
