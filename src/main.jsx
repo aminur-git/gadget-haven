@@ -15,7 +15,7 @@ import Wishlist from "./assets/Components/Wish-list/Wishlist.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "",
+    path: "/",
     element: <Root></Root>,
     errorElement: <Error></Error>,
     loader: () => fetch("../public/products.json"),
