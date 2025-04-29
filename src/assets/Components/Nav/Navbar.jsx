@@ -54,9 +54,9 @@ const Navbar = () => {
         <NavLink to={"/dashboard/cart"}><button className="btn btn-sm md:btn-md btn-circle bg-white   ">
           <BsCart3 className="text-md md:text-xl  bg-white" />
         </button></NavLink>
-        <button className="btn btn-circle btn-xs bg-white sm:btn-md ">
+        <NavLink to={"dashboard/wishlist"}><button className="btn btn-circle btn-xs bg-white sm:btn-md ">
           <FaRegHeart className="text-md md:text-xl" />
-        </button>
+        </button></NavLink>
       </div>
       </div>
     </div>

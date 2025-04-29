@@ -4,10 +4,6 @@ import { Link } from "react-router";
 const Product = ({ product }) => {
   const { product_title, product_image, price, product_id } = product;
 
-
-  
-  
-
   return (
     <div>
       <div className="card p-4  bg-white shadow-xl ">
@@ -15,7 +11,7 @@ const Product = ({ product }) => {
           <img
             className="rounded-2xl border  border-gray-200 p-4"
             src={product_image}
-            alt="Shoes"
+            alt="product"
           />
         </figure>
         <div className="card-body">

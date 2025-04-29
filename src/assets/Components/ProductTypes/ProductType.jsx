@@ -21,8 +21,11 @@ const ProductType = () => {
 
   if (!product) {
     return (
-      <div className="flex justify-center mt-20">
-        <span className="loading loading-spinner text-4xl text-center"></span>
+      <div className="flex w-52 flex-col gap-4">
+        <div className="skeleton h-32 w-full"></div>
+        <div className="skeleton h-4 w-28"></div>
+        <div className="skeleton h-4 w-full"></div>
+        <div className="skeleton h-4 w-full"></div>
       </div>
     );
   }
@@ -45,17 +48,14 @@ const ProductType = () => {
   const handleAddToCart = () => {
     if (!product.availability) {
       available();
-    } 
-    else if (cart.some((item) => item.product_id === product.product_id)) {
+    } else if (cart.some((item) => item.product_id === product.product_id)) {
       exists();
-    } 
-    else {
+    } else {
       const totalCart = [...cart, product];
       setCart(totalCart);
       success();
     }
   };
-  
 
   return (
     <div>

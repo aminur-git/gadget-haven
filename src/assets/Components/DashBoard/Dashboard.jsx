@@ -12,10 +12,10 @@ const Dashboard = () => {
           level. From smart devices to the coolest accessories, we have it all!
         </p>
         <div className="flex justify-center gap-6 ">
-          <Link to={"/dashboard/cart"}><button className="btn rounded-2xl px-8">Cart</button></Link>
-          <button className="btn btn-outline rounded-2xl px-8 border-white">
+          <Link to={"/dashboard/cart"}><button className="btn  rounded-2xl px-8">Cart</button></Link>
+          <Link to={"/dashboard/wishlist"}><button className="btn  rounded-2xl px-8 border-white">
             Wishlist
-          </button>
+          </button></Link>
         </div>
       </div>
       </div>

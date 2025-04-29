@@ -21,13 +21,13 @@ const Banner = () => {
           </button>
         </div>
       </div>
-        <div className="flex justify-center relative -top-24 ">
-          <img
-            src={bannerImg}
-            className="rounded-2xl max-w-xs md:max-w-md lg:max-w-xl p-4 border border-white glass "
-            alt=""
-          />
-        </div>
+      <div className="flex justify-center relative -top-24 ">
+        <img
+          src={bannerImg}
+          className="rounded-2xl max-w-xs md:max-w-md lg:max-w-xl p-4 border border-white glass "
+          alt=""
+        />
+      </div>
     </div>
   );
 };

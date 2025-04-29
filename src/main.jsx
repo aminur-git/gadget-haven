@@ -11,6 +11,7 @@ import Root from "./assets/Components/Root/Root.jsx";
 import ProductType from "./assets/Components/ProductTypes/ProductType.jsx";
 import Cart from "./assets/Components/Cart/Cart.jsx";
 import Dashboard from "./assets/Components/DashBoard/Dashboard.jsx";
+import Wishlist from "./assets/Components/Wish-list/Wishlist.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
           {
             path: '/dashboard/cart',
             element: <Cart></Cart>
+          },
+          {
+            path: '/dashboard/wishlist',
+            element: <Wishlist></Wishlist>
           }
         ]
       },

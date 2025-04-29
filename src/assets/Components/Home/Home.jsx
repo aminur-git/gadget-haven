@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="">
       <div className="">
-        <Banner></Banner>s
+        <Banner></Banner>
       </div>
       <h1 className="text-3xl font-semibold text-center">
         Explore Cutting-Edge Gadgets
@@ -31,9 +31,11 @@ const Home = () => {
         </ul>
       </div>
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch p-4">
-        {products.map((product, idx) => (
-          <Product key={idx} product={product}></Product>
-        ))}
+        {
+          !products || products.length === 0 ? <div>loading..</div> : products.map((product, idx) => (
+            <Product key={idx} product={product}></Product>
+          ))
+        }
       </div>
     </div>
   );
